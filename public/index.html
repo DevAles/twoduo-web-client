@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>twoduo-web-client</h1>
+    <h2>Task 1:</h2>
+    <p id="task1"></p>
+    <h2>Task 2:</h2>
+    <p id="task2"></p>
+
+    <script>
+        const response = fetch("http://localhost:8080/");
+        response.then(res => res.json()).then(json => {
+            document.getElementById("task1").innerText = json
+            document.getElementById("task2").innerText = json
+            console.log(json)
+        })
+    </script>
+</body>
+
+</html>
