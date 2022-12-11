@@ -16,7 +16,7 @@
     <p id="task2"></p>
 
     <script>
-        const response = fetch("http://localhost:8080/");
+        const response = fetch("https://twoduo-api-development.up.railway.app/");
         response.then(res => res.json()).then(json => {
             document.getElementById("task1").innerText = json
             document.getElementById("task2").innerText = json
